@@ -42,6 +42,7 @@ public class BrickBehaviour : MonoBehaviour {
 	}
 
 	public void Kamikaze(List<GameObject> historic) {
+        ScoreManager.score += 5 + historic.Count;
 		foreach (GameObject current in voisins) {
 			if (!historic.Contains (current)) {
 				historic.Add (current);

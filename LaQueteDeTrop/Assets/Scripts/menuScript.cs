@@ -7,7 +7,7 @@ public class menuScript : MonoBehaviour
 {
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Etienne");
     }
 
     public void Credits()

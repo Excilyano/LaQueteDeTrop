@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Prefab\EMPTY_PREFAB.cs" />
+    <Compile Include="Assets\Scripts\BrickBehaviour.cs" />
     <Compile Include="Assets\Scripts\EMPTY_SCRIPT.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ProgressionBar.cs" />
