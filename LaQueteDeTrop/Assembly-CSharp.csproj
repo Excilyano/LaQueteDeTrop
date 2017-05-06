@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\BrickBehaviour.cs" />
      <Compile Include="Assets\Scripts\EMPTY_SCRIPT.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\progressBar.cs" />
      <Compile Include="Assets\Sounds\EMPTY_SOUND.cs" />
  <Reference Include="UnityEngine.UI">

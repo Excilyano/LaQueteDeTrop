@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/testProgressBar.unity
-=======
-- path: Assets/Scenes/Menu.unity
->>>>>>> 5113562c188e5e35b5cc4bdfc35d224326f1a28e
+- path: Assets/Scenes/Etienne.unity
   isLoaded: 1
   isActive: 1
