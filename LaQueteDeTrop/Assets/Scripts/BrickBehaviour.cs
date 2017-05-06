@@ -43,6 +43,10 @@ public class BrickBehaviour : MonoBehaviour {
 
 	public void Kamikaze(List<GameObject> historic) {
         ScoreManager.score += 5 + historic.Count;
+        if (ScoreManager.score >= 1337)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        }
 		foreach (GameObject current in voisins) {
 			if (!historic.Contains (current)) {
 				historic.Add (current);
