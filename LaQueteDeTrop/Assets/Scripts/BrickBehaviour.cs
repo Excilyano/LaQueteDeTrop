@@ -49,7 +49,7 @@ public class BrickBehaviour : MonoBehaviour {
 				current.GetComponent<BrickBehaviour> ().Kamikaze (historic);
 			}
 		}
-		Destroy (this.gameObject, 0.2f);
+		Destroy (this.gameObject, 0.1f);
 	}
 
 	public void SetCouleur(int col) {

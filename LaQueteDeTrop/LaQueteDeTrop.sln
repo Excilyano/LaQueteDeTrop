@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaQueteDeTrop", "LaQueteDeTrop.csproj", "{F2B1B504-E878-E95C-2B5C-361F1D73FB16}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaQueteDeTrop", "Assembly-CSharp.csproj", "{60920CF4-9665-4CE3-28C0-E9A6FC12F74B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2B1B504-E878-E95C-2B5C-361F1D73FB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2B1B504-E878-E95C-2B5C-361F1D73FB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2B1B504-E878-E95C-2B5C-361F1D73FB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2B1B504-E878-E95C-2B5C-361F1D73FB16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60920CF4-9665-4CE3-28C0-E9A6FC12F74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60920CF4-9665-4CE3-28C0-E9A6FC12F74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60920CF4-9665-4CE3-28C0-E9A6FC12F74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60920CF4-9665-4CE3-28C0-E9A6FC12F74B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
