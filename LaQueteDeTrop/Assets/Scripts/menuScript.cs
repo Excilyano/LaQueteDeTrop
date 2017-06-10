@@ -5,6 +5,21 @@
 /// </summary>
 public class menuScript : MonoBehaviour
 {
+	public GameObject canvasMenu;
+	public GameObject canvasCredit;
+
+	public static GameObject canvasMenuStatic;
+	public static GameObject canvasCreditStatic;
+
+	void Start () {
+		canvasMenuStatic = canvasMenu;
+		canvasCreditStatic = canvasCredit;
+		if (canvasMenu && canvasCredit) {
+			canvasMenuStatic.SetActive (true);
+			canvasCreditStatic.SetActive (false);
+		}
+	}
+
     public void StartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Etienne");
@@ -12,12 +27,23 @@ public class menuScript : MonoBehaviour
 
     public void Credits()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+		canvasMenuStatic.SetActive(false);
+		canvasCreditStatic.SetActive(true);
     }
 
     public void Menu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+		canvasMenuStatic.SetActive(true);
+		canvasCreditStatic.SetActive(false);
     }
+
+	public void GoToMenu() {
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+	}
+
+	public void GoToNextLevel() {
+		//UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+		GameManager.QueteSuivante();
+	}
 }
 

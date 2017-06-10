@@ -50,10 +50,12 @@
      <Compile Include="Assets\Scripts\BrickBehaviour.cs" />
      <Compile Include="Assets\Scripts\EMPTY_SCRIPT.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\progressBar.cs" />
      <Compile Include="Assets\Sounds\EMPTY_SOUND.cs" />
+     <Compile Include="Assets\Sprites\EMPTY_SPRITE.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

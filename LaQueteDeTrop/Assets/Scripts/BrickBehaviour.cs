@@ -7,6 +7,10 @@ public class BrickBehaviour : MonoBehaviour {
 	private List<GameObject> voisins = new List<GameObject>();
     private static List<GameObject> historic;
 
+	public static int[] nbCouleursSpawnees = new int[6] {0, 0, 0, 0, 0, 0};
+	public static int nbClics = 0;
+	public static int nbBriquesDetruites = 0;
+
     // Use this for initialization
     void Start () {
 	}
@@ -30,25 +34,26 @@ public class BrickBehaviour : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (voisins.Count > 1
-			|| (voisins.Count == 1 && voisins[0].GetComponent<BrickBehaviour> ().GetVoisins().Count > 1)) {
-			historic = new List<GameObject> ();
-			historic.Add (gameObject);
-			Kamikaze ();
-            if (historic.Count < 5)
-            {
-                ScoreManager.AddToScore((historic.Count - 2) * 30);
-                progressBar.AugmenterBarre(0.05f + 0.025f * (historic.Count - 3));
-            } else
-            {
-                ScoreManager.AddToScore(90);
-                progressBar.AugmenterBarre(0.1f);
-            }
-            if (ScoreManager.score >= 1500)
-            {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-            }
-        }
+		if (!GameManager.isPaused) {
+			if (voisins.Count > 1
+			   || (voisins.Count == 1 && voisins [0].GetComponent<BrickBehaviour> ().GetVoisins ().Count > 1)) {
+				historic = new List<GameObject> ();
+				historic.Add (gameObject);
+				Kamikaze ();
+				GameManager.provocation++;
+				nbClics++;
+				MusicManager.JouerSon ();
+				// Determiner la voix de facon aleatoire
+				MusicManager.JouerVoix (couleur);
+				if (historic.Count < 5) {
+					ScoreManager.AddToScore ((historic.Count - 2) * 30);
+					progressBar.AugmenterBarre (0.05f + 0.025f * (historic.Count - 3));
+				} else {
+					ScoreManager.AddToScore (90);
+					progressBar.AugmenterBarre (0.1f);
+				}
+			}
+		}
 	}
 
 	public void Kamikaze() {
@@ -58,11 +63,14 @@ public class BrickBehaviour : MonoBehaviour {
 				current.GetComponent<BrickBehaviour> ().Kamikaze ();
 			}
 		}
+		nbCouleursSpawnees [this.couleur]--;
+		nbBriquesDetruites++;
 		Destroy (this.gameObject, 0.1f);
 	}
 
 	public void SetCouleur(int col) {
 		couleur = col;
+		nbCouleursSpawnees [col]++;
 	}
 
 	public int GetCouleur() {
